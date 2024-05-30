@@ -1,4 +1,4 @@
-package config;
+package org.example.config;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;

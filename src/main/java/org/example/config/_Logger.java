@@ -1,4 +1,4 @@
-package config;
+package org.example.config;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -31,7 +31,7 @@ public interface _Logger<T> {
     // este método é responsável por salvar o log em um arquivo .log
     private void saveLog(String message) {
         try {
-            File file = new File("logs\\cp2.log");
+            File file = new File("logs\\logs.log");
             FileWriter fileWriter = new FileWriter(file, true);
             fileWriter.write(message);
             fileWriter.close();

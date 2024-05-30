@@ -1,4 +1,4 @@
-package config;
+package org.example.config;
 
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerResponseContext;
