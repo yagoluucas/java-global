@@ -115,3 +115,39 @@
 16:41:31.675 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
 16:41:48.453 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
 16:41:48.457 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+17:40:00.800 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+17:40:00.805 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+17:43:45.120 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+17:43:45.120 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+17:45:04.523 [grizzly-http-server-2] ERROR org.example.config._Logger - Erro ao criar doação: ORA-00936: expressão não encontrada
+
+17:45:04.524 [grizzly-http-server-2] ERROR org.example.config._Logger - Erro ao criar doação: ORA-00936: expressão não encontrada
+
+17:48:32.443 [grizzly-http-server-4] ERROR org.example.config._Logger - Erro ao criar doação: ORA-00936: expressão não encontrada
+
+17:48:32.446 [grizzly-http-server-4] ERROR org.example.config._Logger - Erro ao criar doação: ORA-00936: expressão não encontrada
+
+17:49:14.359 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:49:14.362 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:51:59.142 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:51:59.144 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:05.930 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:05.932 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:23.253 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:23.253 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:37.138 [grizzly-http-server-6] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:53:37.141 [grizzly-http-server-6] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:57:57.049 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00936: expressão não encontrada
+
+17:58:14.405 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+17:58:14.408 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
