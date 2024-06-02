@@ -11,7 +11,6 @@ import java.util.Map;
 
 public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usuario> {
 
-    private static final DenunciaRepository denunciaRepository = new DenunciaRepository();
     private static final OracleDatabase oracle = new OracleDatabase();
 
     private static final String TABLE_NAME = "USUARIO_G";
@@ -52,8 +51,7 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
                         resultSet.getInt(TABLE_COLUMNS.get("ID")),
                         resultSet.getString(TABLE_COLUMNS.get("NOME")),
                         resultSet.getString(TABLE_COLUMNS.get(("EMAIL"))),
-                        resultSet.getString(TABLE_COLUMNS.get(("SENHA"))),
-                        denunciaRepository.ReadDenunciaByUser(resultSet.getInt("ID"))
+                        resultSet.getString(TABLE_COLUMNS.get(("SENHA")))
                 ));
             }
             logInfo("Sucesso ao recuperar usuários");
@@ -67,6 +65,27 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
     @Override
     public Usuario Read(int id) {
         return null;
+    }
+
+    public Usuario ReadUserByName(String nomeUsuario) {
+        Usuario usuario = new Usuario();
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM "
+                    + TABLE_NAME + " WHERE " + TABLE_COLUMNS.get("NOME") + " = ?");
+            preparedStatement.setString(1, nomeUsuario);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                usuario = new Usuario(
+                        resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                        resultSet.getString(TABLE_COLUMNS.get("NOME")),
+                        resultSet.getString(TABLE_COLUMNS.get("SENHA"))
+                );
+            }
+            logInfo("Sucesso ao recuperar usuário com o nome: " + nomeUsuario);
+        }catch (SQLException e){
+            logError("Erro ao recuperar usuario com o nome: " + nomeUsuario);
+        }
+        return usuario;
     }
 
     @Override

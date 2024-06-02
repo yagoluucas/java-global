@@ -30,12 +30,46 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
 
     @Override
     public List<Denuncia> ReadAll() {
-        return null;
+        List<Denuncia> denuncias = new ArrayList<>();
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM " + TABLE_NAME);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                denuncias.add(
+                        new Denuncia(
+                                resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                                resultSet.getString(TABLE_COLUMNS.get("TITULO")),
+                                resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
+                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
+                        )
+                );
+            }
+        }catch (SQLException e) {
+            logError("Erro ao recuperar denuncias: " + e.getMessage());
+        }
+        return denuncias;
     }
 
     @Override
     public Denuncia Read(int id) {
-        return null;
+        Denuncia denuncia = new Denuncia();
+        try (var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM " +
+                    TABLE_NAME + " WHERE " + TABLE_COLUMNS.get("ID") + " = ?");
+            preparedStatement.setInt(1, id);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                denuncia = new Denuncia(
+                        resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                        resultSet.getString(TABLE_COLUMNS.get("TITULO")),
+                        resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
+                        resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
+                );
+            }
+        }catch (SQLException e) {
+            logError("Erro ao recuperar denuncia com o id: " + id);
+        }
+        return denuncia;
     }
 
     @Override

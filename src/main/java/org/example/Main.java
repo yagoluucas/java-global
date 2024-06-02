@@ -5,6 +5,7 @@ import org.example.entities.AtividadeNoSite;
 import org.example.entities.Denuncia;
 import org.example.entities.Doacao;
 import org.example.entities.Usuario;
+import org.example.repository.UsuarioRepository;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -12,6 +13,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import java.io.IOException;
 import java.net.URI;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 /**
  * Main class.
@@ -46,6 +48,9 @@ public class Main {
         System.out.println(String.format("Jersey app started with endpoints available at "
                 + "%s%nHit Ctrl-C to stop it...", BASE_URI));
 
+        Usuario usuario = new Usuario("Yago", "090900", "yago543@gmail.com");
+        UsuarioRepository usuarioRepository = new UsuarioRepository();
+        System.out.println(usuarioRepository.ReadUserByName(usuario.getNome()));
         System.in.read();
         server.stop();
     }

@@ -1,0 +1,3 @@
+09:36:38.379 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+09:48:59.241 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+09:48:59.245 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
