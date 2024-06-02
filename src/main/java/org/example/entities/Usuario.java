@@ -11,17 +11,25 @@ public class Usuario extends _BaseEntitie{
 
     public Usuario(){}
 
-    public Usuario(String nome, String senha, List<Denuncia> denuncias) {
+    public Usuario(String nome, String senha, String email, List<Denuncia> denuncias) {
         this.nome = nome;
         this.senha = senha;
         this.denuncias = denuncias;
+        this.email = email;
     }
 
-    public Usuario(int id, String nome, String senha, List<Denuncia> denuncias) {
+    public Usuario(int id, String nome, String senha, String email, List<Denuncia> denuncias) {
         super(id);
         this.nome = nome;
         this.senha = senha;
         this.denuncias = denuncias;
+        this.email = email;
+    }
+
+    public Usuario(int id, String nome, String senha) {
+        super(id);
+        this.nome = nome;
+        this.senha = senha;
     }
 
     public String getNome() {

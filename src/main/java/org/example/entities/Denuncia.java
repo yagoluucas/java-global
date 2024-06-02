@@ -15,6 +15,12 @@ public class Denuncia extends _BaseEntitie{
         this.usuario = usuario;
     }
 
+    public Denuncia(int id, String tituloDenuncia, String descricaoDenuncia, String localDenuncia) {
+        this.tituloDenuncia = tituloDenuncia;
+        this.descricaoDenuncia = descricaoDenuncia;
+        this.localDenuncia = localDenuncia;
+    }
+
     public Denuncia(int id, String tituloDenuncia, String descricaoDenuncia, String localDenuncia, Usuario usuario) {
         super(id);
         this.tituloDenuncia = tituloDenuncia;

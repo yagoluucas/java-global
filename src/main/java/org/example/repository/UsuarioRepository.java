@@ -5,11 +5,13 @@ import org.example.config._Logger;
 import org.example.entities.Usuario;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usuario> {
 
+    private static final DenunciaRepository denunciaRepository = new DenunciaRepository();
     private static final OracleDatabase oracle = new OracleDatabase();
 
     private static final String TABLE_NAME = "USUARIO_G";
@@ -24,17 +26,15 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
     @Override
     public void Create(Usuario entity) {
         try(var connection = oracle.getConnection()) {
-            var sql = "INSERT INTO " +
+            var preparedStatement = connection.prepareStatement("INSERT INTO " +
                     TABLE_NAME + " (" + TABLE_COLUMNS.get("NOME") + ", " +
                     TABLE_COLUMNS.get("EMAIL") + ", " +
-                    TABLE_COLUMNS.get("SENHA") + ") " + "VALUES (?, ?, ?)";
-
-            var preparedStatement = connection.prepareStatement(sql);
+                    TABLE_COLUMNS.get("SENHA") + ") " + "VALUES (?, ?, ?)");
             preparedStatement.setString(1, entity.getNome());
             preparedStatement.setString(2, entity.getEmail());
             preparedStatement.setString(3, entity.getSenha());
-            var result = preparedStatement.executeUpdate();
-            logInfo("Usuário criado com sucesso: " + result);
+            var resultSet = preparedStatement.executeUpdate();
+            logInfo("Usuário criado com sucesso: " + resultSet);
 
         }catch (SQLException e) {
             logError("Erro ao criar usuário: " + e.getMessage());
@@ -43,7 +43,25 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
 
     @Override
     public List<Usuario> ReadAll() {
-        return null;
+        List<Usuario> usuarios = new ArrayList<>();
+        try (var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM " + TABLE_NAME);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                usuarios.add(new Usuario(
+                        resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                        resultSet.getString(TABLE_COLUMNS.get("NOME")),
+                        resultSet.getString(TABLE_COLUMNS.get(("EMAIL"))),
+                        resultSet.getString(TABLE_COLUMNS.get(("SENHA"))),
+                        denunciaRepository.ReadDenunciaByUser(resultSet.getInt("ID"))
+                ));
+            }
+            logInfo("Sucesso ao recuperar usuários");
+            return usuarios;
+        }catch (SQLException e) {
+            logError("Erro ao buscar usuários: " + e.getMessage());
+        }
+        return usuarios;
     }
 
     @Override
