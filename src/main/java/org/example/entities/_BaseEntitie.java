@@ -1,6 +1,6 @@
 package org.example.entities;
 
-public class _BaseEntitie {
+public abstract class _BaseEntitie {
     private int id;
 
     public _BaseEntitie(){}

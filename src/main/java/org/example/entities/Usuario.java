@@ -1,12 +1,13 @@
 package org.example.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario extends _BaseEntitie{
     private String nome;
     private String email;
     private String senha;
-    private List<Denuncia> denuncias;
+    private List<Denuncia> denuncias = new ArrayList<>();
 
     public Usuario(){}
 

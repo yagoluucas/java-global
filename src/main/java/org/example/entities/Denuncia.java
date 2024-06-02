@@ -21,6 +21,40 @@ public class Denuncia extends _BaseEntitie{
         this.descricaoDenuncia = descricaoDenuncia;
         this.localDenuncia = localDenuncia;
         this.usuario = usuario;
+        this.usuario.getDenuncias().add(this);
+    }
+
+    public String getTituloDenuncia() {
+        return tituloDenuncia;
+    }
+
+    public void setTituloDenuncia(String tituloDenuncia) {
+        this.tituloDenuncia = tituloDenuncia;
+    }
+
+    public String getDescricaoDenuncia() {
+        return descricaoDenuncia;
+    }
+
+    public void setDescricaoDenuncia(String descricaoDenuncia) {
+        this.descricaoDenuncia = descricaoDenuncia;
+    }
+
+    public String getLocalDenuncia() {
+        return localDenuncia;
+    }
+
+    public void setLocalDenuncia(String localDenuncia) {
+        this.localDenuncia = localDenuncia;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        this.usuario.getDenuncias().add(this);
     }
 
     @Override
