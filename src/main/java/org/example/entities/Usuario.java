@@ -30,6 +30,11 @@ public class Usuario extends _BaseEntitie{
         this.senha = senha;
     }
 
+    public Usuario(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
+    }
+
     public String getNome() {
         return nome;
     }

@@ -1,3 +1,117 @@
-09:36:38.379 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
-09:48:59.241 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
-09:48:59.245 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:11:15.347 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:11:15.350 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:11:35.590 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:11:35.590 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:12:42.821 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:12:42.826 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:12:49.644 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:12:49.645 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:12:49.806 [grizzly-http-server-6] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+14:12:49.806 [grizzly-http-server-6] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+14:13:15.808 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:13:15.809 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:28:02.698 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:02.703 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:36.240 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:36.241 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:39.662 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:39.663 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:28:46.583 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:28:46.583 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago Lucas
+14:28:54.818 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: tytytyty
+14:28:54.819 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: tytytyty
+14:29:01.433 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+14:29:01.434 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+15:08:10.598 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-00928: palavra-chave SELECT não encontrada
+
+15:08:10.602 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-00928: palavra-chave SELECT não encontrada
+
+15:09:15.889 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-02291: restrição de integridade (RM553013.DENUNCIA_USUARIO_FK) violada - chave mãe não localizada
+
+15:09:15.892 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-02291: restrição de integridade (RM553013.DENUNCIA_USUARIO_FK) violada - chave mãe não localizada
+
+15:13:41.815 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+15:13:41.822 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+15:13:42.208 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: nomeUsuario
+15:13:42.208 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: nomeUsuario
+15:13:42.253 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-02291: restrição de integridade (RM553013.DENUNCIA_USUARIO_FK) violada - chave mãe não localizada
+
+15:13:42.253 [main] ERROR org.example.config._Logger - Erro ao cadastrar denuncia: ORA-02291: restrição de integridade (RM553013.DENUNCIA_USUARIO_FK) violada - chave mãe não localizada
+
+15:15:04.970 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+15:15:04.975 [main] INFO  org.example.config._Logger - Usuário criado com sucesso: 1
+15:15:05.316 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: João
+15:15:05.316 [main] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: João
+15:15:05.341 [main] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+15:15:05.341 [main] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+15:16:27.879 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:16:27.882 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:17:45.985 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:17:45.990 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:18:49.940 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:18:49.944 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:20:49.810 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:23:13.068 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:23:13.072 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:23:39.778 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:23:39.781 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:24:04.109 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:24:04.111 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :ORA-00920: operador relacional inválido
+
+15:24:41.964 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:24:41.972 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:25:53.336 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:26:33.568 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:26:33.571 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:27:58.771 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:27:58.775 [main] ERROR org.example.config._Logger - Erro ao recuperar denuncias do usuário:João, erro :Nome de coluna inválido
+15:29:45.792 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+15:29:45.795 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+15:31:43.086 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+15:31:43.089 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+16:03:58.186 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+16:03:58.192 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+16:04:08.866 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+16:04:08.867 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+16:05:20.082 [grizzly-http-server-17] INFO  org.example.config._Logger - Sucesso ao recuperar usuários
+16:05:20.082 [grizzly-http-server-17] INFO  org.example.config._Logger - Sucesso ao recuperar usuários
+16:20:18.582 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+16:20:18.591 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : João
+16:29:20.031 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:29:20.034 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:29:52.021 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:29:52.024 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:30:38.502 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:30:38.505 [main] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:16.144 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:16.147 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:16.314 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:16.314 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:41.151 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:33:41.154 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:34:36.441 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:34:36.445 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:34:59.206 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:34:59.207 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:35:00.778 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:35:00.780 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:40:13.426 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : null
+16:40:13.431 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : null
+16:40:31.902 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : null
+16:40:31.902 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : null
+16:41:31.670 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:41:31.675 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:41:48.453 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+16:41:48.457 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
