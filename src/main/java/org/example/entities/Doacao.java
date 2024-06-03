@@ -2,24 +2,29 @@ package org.example.entities;
 
 public class Doacao extends _BaseEntitie{
     private double valor;
-    private String nome;
-    private String telefone;
-    private String email;
+
+    private Usuario usuario;
+
     public Doacao(){}
 
-    public Doacao(double valor, String nome, String telefone, String email) {
+    public Doacao(double valor) {
         this.valor = valor;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
     }
 
-    public Doacao(int id, double valor, String nome, String telefone, String email) {
+    public Doacao(double valor, Usuario usuario) {
+        this.valor = valor;
+        this.usuario = usuario;
+    }
+
+    public Doacao(int id, double valor, Usuario usuario) {
         super(id);
         this.valor = valor;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.email = email;
+        this.usuario = usuario;
+    }
+
+    public Doacao(int id, double valor) {
+        super(id);
+        this.valor = valor;
     }
 
     public double getValor() {
@@ -30,37 +35,19 @@ public class Doacao extends _BaseEntitie{
         this.valor = valor;
     }
 
-    public String getNome() {
-        return nome;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     @Override
     public String toString() {
         return "Doacao{" +
                 "valor=" + valor +
-                ", nome='" + nome + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", email='" + email + '\'' +
-                "} " + super.toString();
+                ", usuario=" + usuario +
+                '}';
     }
 }

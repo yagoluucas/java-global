@@ -205,3 +205,15 @@
 22:01:55.380 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
 22:02:04.504 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
 22:02:04.505 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+11:46:40.511 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: null
+11:46:40.516 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: null
+11:46:40.717 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+11:46:40.717 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+11:48:01.646 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: null
+11:48:01.647 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: null
+11:48:01.816 [grizzly-http-server-3] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+11:48:01.817 [grizzly-http-server-3] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
