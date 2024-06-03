@@ -65,19 +65,4 @@ public class DoacaoRepository implements _Logger {
         }
         return doacaos;
     }
-
-
-    public Doacao Read(int id) {
-        return null;
-    }
-
-
-    public void Update(Doacao entity) {
-
-    }
-
-
-    public void Delete(int id) {
-
-    }
 }

@@ -151,3 +151,57 @@
 
 17:58:14.405 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
 17:58:14.408 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+17:59:52.580 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+17:59:52.583 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:02:44.240 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:02:44.241 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:03:08.700 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:03:08.701 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:08:08.878 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:08:08.879 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:08:17.435 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:08:17.435 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:09:43.290 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:09:43.290 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:09:48.492 [grizzly-http-server-11] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:09:48.493 [grizzly-http-server-11] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:15:49.664 [grizzly-http-server-13] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:15:49.664 [grizzly-http-server-13] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:15:55.628 [grizzly-http-server-14] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:15:55.629 [grizzly-http-server-14] INFO  org.example.config._Logger - Sucesso ao recuperar doações
+18:18:28.321 [grizzly-http-server-16] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:18:28.322 [grizzly-http-server-16] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+18:29:04.245 [grizzly-http-server-19] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:29:04.246 [grizzly-http-server-19] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:29.500 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:29.501 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:40.006 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:40.007 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:43.079 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:31:43.080 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:33:49.388 [grizzly-http-server-20] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:33:49.389 [grizzly-http-server-20] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:37:41.989 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+18:37:41.989 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+21:49:47.782 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+21:49:47.788 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+21:49:47.820 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+21:49:47.820 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+21:55:38.002 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+21:55:38.003 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+21:55:38.021 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+21:55:38.021 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+22:00:52.373 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:00:52.376 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:00:52.403 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+22:00:52.403 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+22:01:09.541 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:01:09.542 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:01:47.490 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:01:47.491 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:01:47.507 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+22:01:47.507 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+22:01:55.380 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:01:55.380 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:02:04.504 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:02:04.505 [grizzly-http-server-9] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago

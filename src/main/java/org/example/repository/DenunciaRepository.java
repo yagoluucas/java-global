@@ -12,11 +12,8 @@ import java.util.Map;
 public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<Denuncia> {
 
     private static final OracleDatabase oracle = new OracleDatabase();
-
     private static final UsuarioRepository usuarioRepository = new UsuarioRepository();
-
     private static final String TABLE_NAME = "DENUNCIA_G";
-
     private static final Map<String, String> TABLE_COLUMNS = Map.of(
             "ID", "ID_DENUNCIA",
             "TITULO", "TITULO",
@@ -36,7 +33,7 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
             preparedStatement.setString(1, entity.getTituloDenuncia());
             preparedStatement.setString(2, entity.getDescricaoDenuncia());
             preparedStatement.setString(3, entity.getLocalDenuncia());
-            preparedStatement.setInt(4, entity.getUsuario().getId());
+            preparedStatement.setInt(4,entity.getUsuario().getId());
             var resultSet = preparedStatement.executeUpdate();
             logInfo("Sucesso ao inserir denunia, linhas afetadas: " + resultSet);
         }catch (SQLException e) {
@@ -44,7 +41,7 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
         }
     }
 
-    public void Create(Denuncia entity, String nomeUsuario) {
+    public boolean Create(Denuncia entity, String nomeUsuario) {
         try(var connection = oracle.getConnection()){
             var preparedStatement = connection.prepareStatement("INSERT INTO "+ TABLE_NAME +" (" +
                     TABLE_COLUMNS.get("TITULO") + ", " +
@@ -57,8 +54,10 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
             preparedStatement.setInt(4, usuarioRepository.ReadUserByName(nomeUsuario).getId());
             var resultSet = preparedStatement.executeUpdate();
             logInfo("Sucesso ao inserir denunia, linhas afetadas: " + resultSet);
+            return true;
         }catch (SQLException e) {
             logError("Erro ao cadastrar denuncia: " + e.getMessage());
+            return false;
         }
     }
 
@@ -113,7 +112,15 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
 
     @Override
     public void Delete(int id) {
-
+        try (var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("DELETE FROM "
+                    + TABLE_NAME + " WHERE "
+                    + TABLE_COLUMNS.get("ID") + " = ?");
+            var resultSet = preparedStatement.executeUpdate();
+            logInfo("Sucesso ao deletar denuncia com o id: " + id);
+        }catch (SQLException e) {
+            logError("Erro ao deletar denuncia com o id: " + id + ", erro: " + e.getMessage());
+        }
     }
 
     public List<Denuncia> ReadDenunciaByUser(String nomeUsuario) {
