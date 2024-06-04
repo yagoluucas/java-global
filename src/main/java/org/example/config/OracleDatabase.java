@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class OracleDatabase {
+
+    // usuário e senha estão disponíveis no arquivo credenciais.properties
     private static Properties properties = new Properties();
 
     static{

@@ -40,7 +40,6 @@ public class DoacaoRepository implements _Logger {
         }
     }
 
-
     public List<Doacao> ReadAll() {
         List<Doacao> doacaos = new ArrayList<>();
         try (var connection = oracle.getConnection()) {

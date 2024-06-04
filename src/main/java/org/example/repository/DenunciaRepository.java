@@ -40,7 +40,6 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
             logError("Erro ao cadastrar denuncia: " + e.getMessage());
         }
     }
-
     public boolean Create(Denuncia entity, String nomeUsuario) {
         try(var connection = oracle.getConnection()){
             var preparedStatement = connection.prepareStatement("INSERT INTO "+ TABLE_NAME +" (" +
@@ -60,7 +59,6 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
             return false;
         }
     }
-
     @Override
     public List<Denuncia> ReadAll() {
         List<Denuncia> denuncias = new ArrayList<>();
