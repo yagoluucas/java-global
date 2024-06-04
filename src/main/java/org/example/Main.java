@@ -1,20 +1,12 @@
 package org.example;
 
 import org.example.config.CorsFilter;
-import org.example.entities.AtividadeNoSite;
-import org.example.entities.Denuncia;
-import org.example.entities.Doacao;
-import org.example.entities.Usuario;
-import org.example.repository.DenunciaRepository;
-import org.example.repository.UsuarioRepository;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import java.io.IOException;
 import java.net.URI;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 /**
  * Main class.

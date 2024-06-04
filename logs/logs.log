@@ -217,3 +217,145 @@
 
 11:48:01.817 [grizzly-http-server-3] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
 
+22:31:43.621 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:31:43.626 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar denuncias do usuário : Yago
+22:32:11.478 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:32:11.479 [grizzly-http-server-6] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:32:11.846 [grizzly-http-server-6] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:32:11.846 [grizzly-http-server-6] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:33:45.211 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:33:45.211 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:33:45.422 [grizzly-http-server-7] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:33:45.422 [grizzly-http-server-7] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:34:05.113 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:34:05.117 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:34:05.314 [grizzly-http-server-5] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:34:05.314 [grizzly-http-server-5] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:34:57.589 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:34:57.590 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:34:57.763 [grizzly-http-server-10] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:34:57.764 [grizzly-http-server-10] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:35:45.500 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:35:45.506 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: "\"Yago\""
+22:35:45.722 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:35:45.723 [grizzly-http-server-0] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:36:21.459 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:36:21.462 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:36:21.650 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:36:21.650 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:38:59.231 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:38:59.250 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:39:05.638 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:39:05.639 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:40:31.854 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:40:31.866 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:40:38.667 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:40:38.668 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:42:51.264 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:42:51.267 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:42:51.449 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:42:51.449 [grizzly-http-server-1] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:43:25.405 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:43:25.408 [grizzly-http-server-7] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:43:25.599 [grizzly-http-server-7] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:43:25.599 [grizzly-http-server-7] ERROR org.example.config._Logger - tes: ORA-00917: vírgula não encontrada
+
+22:44:48.287 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:44:48.290 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:46:23.632 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:46:23.636 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:46:23.832 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+22:46:23.832 [grizzly-http-server-0] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+22:47:49.266 [grizzly-http-server-15] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:47:49.266 [grizzly-http-server-15] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+22:47:49.459 [grizzly-http-server-15] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+22:47:49.459 [grizzly-http-server-15] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+22:54:56.211 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+22:54:56.214 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+23:30:39.839 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+23:30:39.846 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+23:30:40.133 [grizzly-http-server-1] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DOACAO_FK) violada - chave mãe não localizada
+
+23:30:40.133 [grizzly-http-server-1] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DOACAO_FK) violada - chave mãe não localizada
+
+08:15:50.102 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:15:50.108 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:15:50.507 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:15:50.507 [grizzly-http-server-2] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:15:50.532 [grizzly-http-server-2] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:15:50.533 [grizzly-http-server-2] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:17:21.764 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:17:21.765 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:17:22.067 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:17:22.067 [grizzly-http-server-3] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:17:22.084 [grizzly-http-server-3] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:17:22.084 [grizzly-http-server-3] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:18:32.112 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:18:32.113 [grizzly-http-server-4] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:19:25.307 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:19:25.307 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:19:25.332 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:19:25.332 [grizzly-http-server-8] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:24:44.751 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:24:44.758 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:24:44.781 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:24:44.781 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:24:45.079 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:24:45.080 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:24:45.113 [grizzly-http-server-1] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DENUNCIA_FK) violada - chave mãe não localizada
+
+08:24:45.114 [grizzly-http-server-1] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DENUNCIA_FK) violada - chave mãe não localizada
+
+08:25:22.667 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:25:22.668 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:25:22.688 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:25:22.688 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:25:22.999 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:25:22.999 [grizzly-http-server-5] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:25:23.025 [grizzly-http-server-5] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DENUNCIA_FK) violada - chave mãe não localizada
+
+08:25:23.025 [grizzly-http-server-5] ERROR org.example.config._Logger - Erro ao cadastrar atividade no site: ORA-02291: restrição de integridade (RM553013.ATIVIDADE_NO_SITE_DENUNCIA_FK) violada - chave mãe não localizada
+
+08:27:17.880 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:27:17.881 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:27:18.075 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:27:18.075 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao cadastrar doação, linhas afetadas: 1
+08:27:19.378 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:27:19.379 [grizzly-http-server-10] INFO  org.example.config._Logger - Sucesso ao buscar última doação
+08:27:19.390 [grizzly-http-server-10] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:27:19.391 [grizzly-http-server-10] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:40:27.302 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:40:27.306 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:40:27.327 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:40:27.328 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:40:27.621 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:40:27.622 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:40:27.642 [grizzly-http-server-1] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:40:27.642 [grizzly-http-server-1] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:41:55.974 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:41:55.978 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao recuperar usuário com o nome: Yago
+08:41:56.001 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:41:56.001 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao inserir denunia, linhas afetadas: 1
+08:41:56.293 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:41:56.293 [grizzly-http-server-1] INFO  org.example.config._Logger - Sucesso ao buscar última denuncia
+08:41:56.306 [grizzly-http-server-1] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1
+08:41:56.306 [grizzly-http-server-1] INFO  org.example.config._Logger - Atividade no site cadastrada com sucesso, linhas afetadas: 1

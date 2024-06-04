@@ -64,7 +64,25 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
 
     @Override
     public Usuario Read(int id) {
-        return null;
+        Usuario usuario = new Usuario();
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM "
+                    + TABLE_NAME + " WHERE " + TABLE_COLUMNS.get("ID") + " = ?");
+            preparedStatement.setInt(1, id);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                usuario = new Usuario(
+                        resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                        resultSet.getString(TABLE_COLUMNS.get("NOME")),
+                        resultSet.getString(TABLE_COLUMNS.get("SENHA")),
+                        resultSet.getString(TABLE_COLUMNS.get("EMAIL"))
+                );
+            }
+            logInfo("Sucesso ao recuperar usuário com o id: " + id);
+        }catch (SQLException e) {
+            logError("Erro ao recuperar usuário com o id: " + id);
+        }
+        return usuario;
     }
 
     public Usuario readUserByNameOrEmail(String nome, String email) {
@@ -116,11 +134,34 @@ public class UsuarioRepository implements _BaseRepository<Usuario>, _Logger<Usua
     }
     @Override
     public void Update(Usuario entity) {
-
+        try(var connecton = oracle.getConnection()) {
+            var preparedStatement = connecton.prepareStatement("UPDATE "
+                    + TABLE_NAME + " SET " +
+                    TABLE_COLUMNS.get("NOME") + " = ?, " +
+                    TABLE_COLUMNS.get("EMAIL") + " = ?, " +
+                    TABLE_COLUMNS.get("SENHA") + " = ? WHERE " +
+                    TABLE_COLUMNS.get("ID") + " = ?");
+            preparedStatement.setString(1, entity.getNome());
+            preparedStatement.setString(2, entity.getEmail());
+            preparedStatement.setString(3, entity.getSenha());
+            preparedStatement.setInt(4, entity.getId());
+            var resultSet = preparedStatement.executeUpdate();
+            logInfo("Usuário atualizado com sucesso: " + resultSet);
+        }catch (SQLException e) {
+            logError("Erro ao atualizar usuário: " + e.getMessage());
+        }
     }
 
     @Override
     public void Delete(int id) {
-
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("DELETE FROM "
+                    + TABLE_NAME + " WHERE " + TABLE_COLUMNS.get("ID") + " = ?");
+            preparedStatement.setInt(1, id);
+            var resultSet = preparedStatement.executeUpdate();
+            logInfo("Usuário deletado com sucesso: " + resultSet);
+        }catch (SQLException e) {
+            logError("Erro ao deletar usuário: " + e.getMessage());
+        }
     }
 }

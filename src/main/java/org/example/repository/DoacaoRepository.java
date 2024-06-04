@@ -24,14 +24,18 @@ public class DoacaoRepository implements _Logger {
         try(var connection = oracle.getConnection()) {
             var preparedStatement = connection.prepareStatement("INSERT INTO "
                     + TABLE_NAME + "("
-                    + TABLE_COLUMS.get("VALOR") + ", " + TABLE_COLUMS.get("ID_USUARIO") + " ) VALUES (?, ? ") ;
+                    + TABLE_COLUMS.get("VALOR") + ", " + TABLE_COLUMS.get("ID_USUARIO") + " ) VALUES (?, ? )") ;
             preparedStatement.setDouble(1, entity.getValor());
-            preparedStatement.setInt(2, entity.getUsuario() == null ? null : entity.getUsuario().getId());
+            if (entity.getUsuario() != null) {
+                preparedStatement.setInt(2, entity.getUsuario().getId());
+            } else {
+                preparedStatement.setNull(2, java.sql.Types.INTEGER);
+            }
             var resultSet = preparedStatement.executeUpdate();
             logInfo("Sucesso ao cadastrar doação, linhas afetadas: " + resultSet);
             return true;
         }catch (SQLException e) {
-            logError("tes: " + e.getMessage());
+            logError("erro ao cadastrar doação: " + e.getMessage());
             return false;
         }
     }
@@ -54,5 +58,26 @@ public class DoacaoRepository implements _Logger {
             logError("Erro ao buscar doações: " + e.getMessage());
         }
         return doacaos;
+    }
+
+    public Doacao getLastDoacao() {
+        Doacao doacao = new Doacao();
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM "
+                    + TABLE_NAME + " WHERE ROWNUM = 1 ORDER BY "
+                    + TABLE_COLUMS.get("ID") + " DESC");
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                doacao = new Doacao(
+                        resultSet.getInt(TABLE_COLUMS.get("ID")),
+                        resultSet.getDouble(TABLE_COLUMS.get("VALOR"))
+                );
+            }
+            logInfo("Sucesso ao buscar última doação");
+            return doacao;
+        }catch (SQLException e) {
+            logError("Erro ao buscar última doação: " + e.getMessage());
+        }
+        return doacao;
     }
 }

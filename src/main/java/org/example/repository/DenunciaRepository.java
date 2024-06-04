@@ -105,9 +105,47 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
         return denuncia;
     }
 
+    public Denuncia getLastDenuncia() {
+        Denuncia denuncia = new Denuncia();
+        try (var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT * FROM "
+                    + TABLE_NAME + " WHERE ROWNUM = 1 ORDER BY "
+                    + TABLE_COLUMNS.get("ID") + " DESC");
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                denuncia = new Denuncia(
+                        resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                        resultSet.getString(TABLE_COLUMNS.get("TITULO")),
+                        resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
+                        resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
+                );
+            }
+            logInfo("Sucesso ao buscar última denuncia");
+            return denuncia;
+        } catch (SQLException e) {
+            logError("Erro ao buscar última denuncia: " + e.getMessage());
+            return denuncia;
+        }
+    }
+
     @Override
     public void Update(Denuncia entity) {
-
+        try (var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("UPDATE "
+                    + TABLE_NAME + " SET "
+                    + TABLE_COLUMNS.get("TITULO") + " = ?, "
+                    + TABLE_COLUMNS.get("DESCRICAO") + " = ?, "
+                    + TABLE_COLUMNS.get("LOCAL_DENUNCIA") + " = ? WHERE "
+                    + TABLE_COLUMNS.get("ID") + " = ?");
+            preparedStatement.setString(1, entity.getTituloDenuncia());
+            preparedStatement.setString(2, entity.getDescricaoDenuncia());
+            preparedStatement.setString(3, entity.getLocalDenuncia());
+            preparedStatement.setInt(4, entity.getId());
+            preparedStatement.executeUpdate();
+            logInfo("Sucesso ao atualizar denuncia com o id: " + entity.getId());
+        }catch (SQLException e) {
+            logError("Erro ao atualizar denuncia com o id: " + entity.getId() + ", erro: " + e.getMessage());
+        }
     }
 
     @Override

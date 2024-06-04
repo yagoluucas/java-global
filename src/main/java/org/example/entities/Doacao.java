@@ -2,7 +2,6 @@ package org.example.entities;
 
 public class Doacao extends _BaseEntitie{
     private double valor;
-
     private Usuario usuario;
 
     public Doacao(){}
