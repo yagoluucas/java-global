@@ -16,24 +16,17 @@ public class DoacaoRepository implements _Logger {
 
     private static final Map<String, String> TABLE_COLUMS = Map.of(
             "ID", "ID_DOACAO",
-            "NOME", "NOME",
-            "TELEFONE", "TELEFONE",
-            "EMAIL", "EMAIL",
-            "VALOR", "VALOR"
+            "VALOR", "VALOR",
+            "ID_USUARIO", "ID_USUARIO"
     );
 
     public boolean Create(Doacao entity) {
         try(var connection = oracle.getConnection()) {
             var preparedStatement = connection.prepareStatement("INSERT INTO "
                     + TABLE_NAME + "("
-                    + TABLE_COLUMS.get("NOME") + ", "
-                    + TABLE_COLUMS.get("TELEFONE") + ", "
-                    + TABLE_COLUMS.get("EMAIL") + ", "
-                    + TABLE_COLUMS.get("VALOR") + ") VALUES (?, ?, ?, ?) ") ;
-            preparedStatement.setString(1, entity.getNome());
-            preparedStatement.setString(2, entity.getTelefone());
-            preparedStatement.setString(3, entity.getEmail());
-            preparedStatement.setDouble(4, entity.getValor());
+                    + TABLE_COLUMS.get("VALOR") + ", " + TABLE_COLUMS.get("ID_USUARIO") + " ) VALUES (?, ? ") ;
+            preparedStatement.setDouble(1, entity.getValor());
+            preparedStatement.setInt(2, entity.getUsuario() == null ? null : entity.getUsuario().getId());
             var resultSet = preparedStatement.executeUpdate();
             logInfo("Sucesso ao cadastrar doação, linhas afetadas: " + resultSet);
             return true;
@@ -52,10 +45,7 @@ public class DoacaoRepository implements _Logger {
             while(resultSet.next()) {
                 doacaos.add(new Doacao(
                         resultSet.getInt(TABLE_COLUMS.get("ID")),
-                        resultSet.getDouble(TABLE_COLUMS.get("VALOR")),
-                        resultSet.getString(TABLE_COLUMS.get("NOME")),
-                        resultSet.getString(TABLE_COLUMS.get("TELEFONE")),
-                        resultSet.getString(TABLE_COLUMS.get("EMAIL"))
+                        resultSet.getDouble(TABLE_COLUMS.get("VALOR"))
                 ));
             }
             logInfo("Sucesso ao recuperar doações");

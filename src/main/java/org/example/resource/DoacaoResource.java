@@ -13,10 +13,11 @@ import java.util.List;
 public class DoacaoResource {
     private static final DoacaoRepository doacaoRepository = new DoacaoRepository();
     private static final DoacaoService doacaoService = new DoacaoService();
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addDoacao(Doacao doacao) {
-        return doacaoService.validaDoacao(doacao);
+    public Response addDoacao(@QueryParam("nome") String nome, Doacao doacao) {
+        return doacaoService.validaDoacao(doacao, nome);
     }
 
     @GET
