@@ -158,7 +158,6 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
             logError("Erro ao deletar denuncia com o id: " + id + ", erro: " + e.getMessage());
         }
     }
-
     public List<Denuncia> ReadDenunciaByUser(String nomeUsuario) {
         List<Denuncia> denuncias = new ArrayList<>();
         try(var connection = oracle.getConnection()) {
