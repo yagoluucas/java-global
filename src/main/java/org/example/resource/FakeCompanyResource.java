@@ -11,7 +11,6 @@ import org.example.service.FakeCompanyService;
 @Path("fakecompany")
 public class FakeCompanyResource {
     private static final FakeCompanyService fakeCompanyService = new FakeCompanyService();
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public JsonObject getFakeCompanyData() {

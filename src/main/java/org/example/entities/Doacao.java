@@ -13,12 +13,14 @@ public class Doacao extends _BaseEntitie{
     public Doacao(double valor, Usuario usuario) {
         this.valor = valor;
         this.usuario = usuario;
+        this.usuario.getDoacoes().add(this);
     }
 
     public Doacao(int id, double valor, Usuario usuario) {
         super(id);
         this.valor = valor;
         this.usuario = usuario;
+        this.usuario.getDoacoes().add(this);
     }
 
     public Doacao(int id, double valor) {

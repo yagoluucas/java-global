@@ -1,5 +1,7 @@
 package org.example.entities;
 
+import jakarta.json.bind.annotation.JsonbTransient;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,11 @@ public class Usuario extends _BaseEntitie{
     private String nome;
     private String email;
     private String senha;
+
+    @JsonbTransient
     private List<Denuncia> denuncias = new ArrayList<>();
+
+    @JsonbTransient
     private List<Doacao> doacoes = new ArrayList<>();
 
     public Usuario(){}
@@ -68,13 +74,20 @@ public class Usuario extends _BaseEntitie{
         this.denuncias = denuncias;
     }
 
+    public List<Doacao> getDoacoes() {
+        return doacoes;
+    }
+
+    public void setDoacoes(List<Doacao> doacoes) {
+        this.doacoes = doacoes;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
-                ", denuncias=" + denuncias +
                 "} " + super.toString();
     }
 }

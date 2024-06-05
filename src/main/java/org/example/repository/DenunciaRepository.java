@@ -63,7 +63,8 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
     public List<Denuncia> ReadAll() {
         List<Denuncia> denuncias = new ArrayList<>();
         try(var connection = oracle.getConnection()) {
-            var preparedStatement = connection.prepareStatement("SELECT * FROM " + TABLE_NAME);
+            var preparedStatement = connection.prepareStatement("SELECT * FROM " + TABLE_NAME
+                    + " ORDER BY " + TABLE_COLUMNS.get("ID") + " DESC");
             var resultSet = preparedStatement.executeQuery();
             while(resultSet.next()) {
                 denuncias.add(
@@ -71,10 +72,12 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
                                 resultSet.getInt(TABLE_COLUMNS.get("ID")),
                                 resultSet.getString(TABLE_COLUMNS.get("TITULO")),
                                 resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
-                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
+                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA")),
+                                usuarioRepository.Read(resultSet.getInt(TABLE_COLUMNS.get("ID_USUARIO")))
                         )
                 );
             }
+            logInfo("Sucesso ao recuperar denuncias");
         }catch (SQLException e) {
             logError("Erro ao recuperar denuncias: " + e.getMessage());
         }
@@ -126,6 +129,37 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
         }
     }
 
+    public List<Denuncia> ReadDenunciaByUser(String nomeUsuario) {
+        List<Denuncia> denuncias = new ArrayList<>();
+        try(var connection = oracle.getConnection()) {
+            var preparedStatement = connection.prepareStatement("SELECT A."
+                    +TABLE_COLUMNS.get("ID") +", A."
+                    + TABLE_COLUMNS.get("TITULO") +
+                    ", A." + TABLE_COLUMNS.get("DESCRICAO") +
+                    ", A." + TABLE_COLUMNS.get("LOCAL_DENUNCIA") +
+                    " FROM " + TABLE_NAME + " A INNER JOIN USUARIO_G B ON A." +
+                    TABLE_COLUMNS.get("ID_USUARIO") + " = B.ID_USUARIO "
+                    + " WHERE B.NOME = ? ORDER BY A." + TABLE_COLUMNS.get("ID") + " DESC");
+            preparedStatement.setString(1, nomeUsuario);
+            var resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                denuncias.add(
+                        new Denuncia(
+                                resultSet.getInt(TABLE_COLUMNS.get("ID")),
+                                resultSet.getString(TABLE_COLUMNS.get("TITULO")),
+                                resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
+                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
+                        )
+                );
+            }
+            logInfo("Sucesso ao recuperar denuncias do usuário : " + nomeUsuario);
+            return denuncias;
+        }catch (SQLException e) {
+            logError("Erro ao recuperar denuncias do usuário:" + nomeUsuario + ", erro :" + e.getMessage());
+        }
+        return denuncias;
+    }
+
     @Override
     public void Update(Denuncia entity) {
         try (var connection = oracle.getConnection()) {
@@ -157,35 +191,6 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
         }catch (SQLException e) {
             logError("Erro ao deletar denuncia com o id: " + id + ", erro: " + e.getMessage());
         }
-    }
-    public List<Denuncia> ReadDenunciaByUser(String nomeUsuario) {
-        List<Denuncia> denuncias = new ArrayList<>();
-        try(var connection = oracle.getConnection()) {
-            var preparedStatement = connection.prepareStatement("SELECT A."
-                    +TABLE_COLUMNS.get("ID") +", A."
-                    + TABLE_COLUMNS.get("TITULO") +
-                    ", A." + TABLE_COLUMNS.get("DESCRICAO") +
-                    ", A." + TABLE_COLUMNS.get("LOCAL_DENUNCIA") +
-                    " FROM " + TABLE_NAME + " A INNER JOIN USUARIO_G B ON A." +
-                    TABLE_COLUMNS.get("ID_USUARIO") + " = B.ID_USUARIO " + " WHERE B.NOME = ?" );
-            preparedStatement.setString(1, nomeUsuario);
-            var resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                denuncias.add(
-                        new Denuncia(
-                            resultSet.getInt(TABLE_COLUMNS.get("ID")),
-                            resultSet.getString(TABLE_COLUMNS.get("TITULO")),
-                            resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
-                            resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
-                        )
-                );
-            }
-            logInfo("Sucesso ao recuperar denuncias do usuário : " + nomeUsuario);
-            return denuncias;
-        }catch (SQLException e) {
-            logError("Erro ao recuperar denuncias do usuário:" + nomeUsuario + ", erro :" + e.getMessage());
-        }
-        return denuncias;
     }
 
 }

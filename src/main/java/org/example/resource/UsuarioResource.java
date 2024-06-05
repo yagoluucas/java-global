@@ -11,8 +11,8 @@ import java.util.List;
 
 @Path("usuario")
 public class UsuarioResource {
-    UsuarioRepository usuarioRepository = new UsuarioRepository();
-    UsuarioService usuarioService = new UsuarioService();
+    private static final UsuarioRepository usuarioRepository = new UsuarioRepository();
+    private static final UsuarioService usuarioService = new UsuarioService();
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Usuario> getAll(){
@@ -33,7 +33,7 @@ public class UsuarioResource {
         Response response = usuarioService.validaNomeUsuario(usuario);
         if(response == null) {
             usuarioRepository.Create(usuario);
-            return Response.ok("Sucesso ao adicionar usuario").build();
+            return Response.ok("Sucesso ao adicionar usuário").build();
         }
         return response;
     }
