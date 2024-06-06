@@ -1,4 +1,4 @@
-package org.example.infrastructure;
+package org.example.infrastrutue;
 
 public class QrCodeApi {
     public String createQrCodeUrl(String data) {

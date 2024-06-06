@@ -3,7 +3,7 @@ package org.example.service;
 import jakarta.ws.rs.core.Response;
 import org.example.entities.AtividadeNoSite;
 import org.example.entities.Doacao;
-import org.example.infrastructure.QrCodeApi;
+import org.example.infrastrutue.QrCodeApi;
 import org.example.repository.AtividadeNoSiteRepository;
 import org.example.repository.DoacaoRepository;
 import org.example.repository.UsuarioRepository;

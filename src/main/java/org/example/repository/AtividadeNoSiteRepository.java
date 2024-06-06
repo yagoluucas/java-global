@@ -4,8 +4,6 @@ import org.example.config.OracleDatabase;
 import org.example.config._Logger;
 import org.example.entities.AtividadeNoSite;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class AtividadeNoSiteRepository implements _Logger<AtividadeNoSite> {

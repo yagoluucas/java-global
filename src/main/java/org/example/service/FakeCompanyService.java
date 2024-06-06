@@ -1,9 +1,7 @@
 package org.example.service;
 
 import jakarta.json.JsonObject;
-import jakarta.json.JsonString;
-import jakarta.json.JsonValue;
-import org.example.infrastructure.FakeCompanyApi;
+import org.example.infrastrutue.FakeCompanyApi;
 
 public class FakeCompanyService {
     private static final FakeCompanyApi fakeCompanyApi = new FakeCompanyApi();

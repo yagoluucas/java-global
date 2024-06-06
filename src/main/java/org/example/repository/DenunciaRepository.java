@@ -72,8 +72,7 @@ public class DenunciaRepository implements _BaseRepository<Denuncia>, _Logger<De
                                 resultSet.getInt(TABLE_COLUMNS.get("ID")),
                                 resultSet.getString(TABLE_COLUMNS.get("TITULO")),
                                 resultSet.getString(TABLE_COLUMNS.get("DESCRICAO")),
-                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA")),
-                                usuarioRepository.Read(resultSet.getInt(TABLE_COLUMNS.get("ID_USUARIO")))
+                                resultSet.getString(TABLE_COLUMNS.get("LOCAL_DENUNCIA"))
                         )
                 );
             }

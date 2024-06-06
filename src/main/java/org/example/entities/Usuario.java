@@ -10,10 +10,8 @@ public class Usuario extends _BaseEntitie{
     private String email;
     private String senha;
 
-    @JsonbTransient
     private List<Denuncia> denuncias = new ArrayList<>();
 
-    @JsonbTransient
     private List<Doacao> doacoes = new ArrayList<>();
 
     public Usuario(){}

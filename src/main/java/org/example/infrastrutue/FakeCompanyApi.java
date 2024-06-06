@@ -1,4 +1,4 @@
-package org.example.infrastructure;
+package org.example.infrastrutue;
 
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;

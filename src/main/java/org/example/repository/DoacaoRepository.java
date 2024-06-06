@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class DoacaoRepository implements _Logger {
+public class DoacaoRepository implements _Logger<DoacaoRepository> {
     private static final OracleDatabase oracle = new OracleDatabase();
-    private static final UsuarioRepository usuarioRepository = new UsuarioRepository();
     private static final String TABLE_NAME = "DOACAO_G";
 
     private static final Map<String, String> TABLE_COLUMS = Map.of(
@@ -48,8 +47,7 @@ public class DoacaoRepository implements _Logger {
             while(resultSet.next()) {
                 doacaos.add(new Doacao(
                         resultSet.getInt(TABLE_COLUMS.get("ID")),
-                        resultSet.getDouble(TABLE_COLUMS.get("VALOR")),
-                        usuarioRepository.Read(resultSet.getInt(TABLE_COLUMS.get("ID_USUARIO")))
+                        resultSet.getDouble(TABLE_COLUMS.get("VALOR"))
                 ));
             }
             logInfo("Sucesso ao recuperar doações");
