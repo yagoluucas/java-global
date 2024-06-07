@@ -29,7 +29,7 @@ Responsável por adicionar, ler todas as doações e ler doações específicas
 http://localhost:8080/usuario  
 Responsável por adicionar, ler todos os usuários e ler usuários específicos  
 
-http://localhost:8080/fakecompany
+http://localhost:8080/fakecompany  
 Responsável por ler todas as empresas da api que consumimos no Java
 
 
